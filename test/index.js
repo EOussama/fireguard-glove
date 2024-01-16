@@ -1,3 +1,1 @@
-import { firemitt } from '../dist/firemitt.es.js'
-
-console.log(firemitt()); 
+import { EventHelper } from '../dist/firemitt.es.js';

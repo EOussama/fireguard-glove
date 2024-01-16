@@ -1,0 +1,1 @@
+export type TToken = { _tokenResponse: { oauthIdToken: string } } & Object
