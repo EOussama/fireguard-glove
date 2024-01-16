@@ -1,3 +1,3 @@
-import { firemitt } from './../dist/firemitt.es.js'
+import { firemitt } from '../dist/firemitt.es.js'
 
-console.log(firemitt());
+console.log(firemitt()); 
