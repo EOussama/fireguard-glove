@@ -17,14 +17,16 @@ export class EventHelper {
   }
 
   static on<T = any>(type: EventType, func: (data?: T) => any): typeof EventHelper {
-    window.addEventListener('message', (e) => {
+    const handler = (e: MessageEvent) => {
       if (e.isTrusted) {
         if (e.data.type === type) {
           func(e.data.payload);
+          window.removeEventListener('message', handler);
         }
       }
-    });
+    }
 
+    window.addEventListener('message', handler);
     return this;
   }
 }
