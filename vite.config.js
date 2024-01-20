@@ -3,7 +3,7 @@ import dts from 'vite-plugin-dts';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [dts()],
+  plugins: [dts({ copyDtsFiles: true })],
   build: {
     lib: {
       name: 'Firemitt',
