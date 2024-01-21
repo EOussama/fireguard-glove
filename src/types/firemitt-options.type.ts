@@ -1,6 +1,8 @@
 import { TDim, TFireguardOptions, TPos } from '.';
 
 /**
+ * @category Firemitt
+ *
  * @description
  * Options for configuring Firemitt.
  * This type outlines the optional and partial settings that can be applied to customize the Firemitt.

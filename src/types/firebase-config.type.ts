@@ -1,4 +1,6 @@
 /**
+ * @category Firebase
+ *
  * @description
  * Represents the configuration settings for a Firebase application.
  * 

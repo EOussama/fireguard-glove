@@ -2,8 +2,10 @@ import type { TTheme } from './theme.type';
 import type { TFirebaseConfig } from './firebase-config.type';
 
 /**
+ * @category Fireguard
+ *
  * @description
- * Configuration settings for the Fireguard.
+ * Configuration settings for Fireguard.
  * This type includes essential configuration details necessary for initializing and customizing the Fireguard.
  * 
  * @type {TFireguardConfig}

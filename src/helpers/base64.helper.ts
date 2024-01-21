@@ -1,6 +1,8 @@
 import { TMessage } from '..';
 
 /**
+ * @category Helpers
+ *
  * @description
  * Helper class for Base64 encoding and decoding of messages.
  * 

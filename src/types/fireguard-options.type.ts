@@ -3,6 +3,8 @@ import type { TFirebaseConfig } from './firebase-config.type';
 import type { TFireguardConfig } from './fireguard-config.type';
 
 /**
+ * @category Fireguard
+ *
  * @description
  * Options for configuring Fireguard.
  * This type specifies the options that can be provided to customize the Fireguard. It extends the TFireguardConfig with optional properties.

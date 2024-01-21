@@ -1,6 +1,8 @@
 import { EventType } from '..';
 
 /**
+ * @category Firemitt
+ *
  * @description
  * Represents a generic message structure.
  * This type is used for defining a message format with a specific type and payload. It is generic and can accommodate different payload types.

@@ -5,6 +5,8 @@ import type { EventType } from '../enums/event.enum';
 
 
 /**
+ * @category Helpers
+ *
  * @description
  * Helper class for managing custom events across different windows or iframes.
  *

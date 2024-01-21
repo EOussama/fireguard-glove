@@ -1,4 +1,6 @@
 /**
+ * @category Firemitt
+ *
  * @description
  * Represents a position with x and y coordinates.
  * This type is used to define a two-dimensional position in a coordinate system, typically for graphical elements.

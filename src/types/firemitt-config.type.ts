@@ -1,6 +1,8 @@
 import { TDim, TFireguardConfig, TPos } from '.';
 
 /**
+ * @category Firemitt
+ *
  * @description
  * Configuration settings for Firemitt.
  * This type includes necessary configuration details for initializing and setting up the Firemitt.

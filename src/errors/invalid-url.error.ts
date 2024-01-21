@@ -1,6 +1,8 @@
 import { BaseError } from './base.error';
 
 /**
+ * @category Errors
+ *
  * @description
  * Custom error class representing an error that occurs when an invalid URL is provided.
  * This error is thrown when a valid URL is required, but an invalid one is provided.
