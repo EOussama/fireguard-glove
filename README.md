@@ -104,7 +104,7 @@ Firemitt allows you to pass configurations that allows you to customize Fireguar
 | `storageBucket` | `string` | The Google Cloud Storage bucket for Firebase Storage. |
 | `messagingSenderId` | `string` | The sender ID for Firebase Cloud Messaging. |
 
-You read more in details in the [docs](https://ouss.es/firemitt).
+You can read more in details in the [docs](https://ouss.es/firemitt).
 
 ## Contributing
 
