@@ -1,6 +1,8 @@
 import { TNullable } from '.';
 
 /**
+ * @category Generics
+ *
  * @description
  * Represents a type that can be undefined, null, or a specific type.
  * This generic type extends the concept of TNullable by also allowing the variable to be undefined, providing flexibility for optional values.

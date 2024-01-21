@@ -1,4 +1,6 @@
 /**
+ * @category Firemitt
+ *
  * @description
  * Enumeration representing various event types.
  */

@@ -1,6 +1,8 @@
 import { BaseError } from './base.error';
 
 /**
+ * @category Errors
+ *
  * @description
  * Custom error class representing an error that occurs when Firebase initialization fails
  * due to an invalid configuration.

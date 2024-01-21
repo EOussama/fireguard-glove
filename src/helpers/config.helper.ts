@@ -13,6 +13,8 @@ import {
 } from '..';
 
 /**
+ * @category Helpers
+ *
  * @description
  * Helper class for configuring Firemitt and Fireguard settings.
  * 
