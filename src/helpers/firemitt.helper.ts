@@ -3,6 +3,8 @@ import { ConfigHelper, EventHelper } from '.';
 import { TFiremittOptions } from '../types/firemitt-options.type';
 
 /**
+ * @category Helpers
+ *
  * @description
  * Helper class for handling authentication processes using Firemitt.
  * 

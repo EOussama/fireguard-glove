@@ -7,11 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "doc": "npx typedoc src/index.ts"
+    "test": "pnpm exec jest",
+    "doc": "pnpm exec typedoc && cp assets/favicon.ico docs/"
   },
   "packageManager": "pnpm@8.13.1",
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
     "typedoc": "^0.25.7",
+    "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.1"
