@@ -11,7 +11,7 @@ describe('Base64helper', () => {
   });
 
   describe('decode', () => {
-    it('should correctly decode a Base64 string to a TMessage object', () => {
+    test('should correctly decode a Base64 string to a TMessage object', () => {
       const base64String = 'eyAidHlwZSI6IDAsICJwYXlsb2FkIjoge30gfQ==';
       const decoded = Base64helper.decode(base64String);
 
@@ -21,7 +21,7 @@ describe('Base64helper', () => {
   });
 
   describe('encode and decode', () => {
-    it('should return the original TMessage object after encoding and decoding', () => {
+    test('should return the original TMessage object after encoding and decoding', () => {
       const originalMessage = { type: 1, payload: { url: 'https://fireguard-instance.com' } };
       const encoded = Base64helper.encode(originalMessage);
       const decoded = Base64helper.decode(encoded);
