@@ -1,0 +1,62 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.14'
+        registry-url: 'https://registry.npmjs.org/'
+
+    - name: Install Dependencies
+      run: |
+        corepack enable
+        pnpm install
+      env:
+        CI: true
+
+    - name: Build Project
+      run: pnpm build
+
+    - name: Run Tests
+      run: pnpm test
+
+    - name: Packaging
+      run: |
+        cp assets build/assets
+        cp LICENSE build/LICENSE
+        cp README.md build/README.md
+        cp package.json build/package.json
+
+    - name: Publish to npm
+      run: npm publish ./build --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Publish to GitHub Registry
+      run: npm publish ./build --registry https://npm.pkg.github.com
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup Git Config
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+
+    - name: Commit and Push to Build Branch
+      run: |
+        git checkout -b build
+        git add build/
+        git commit -m "Publish build"
+        git push origin build
