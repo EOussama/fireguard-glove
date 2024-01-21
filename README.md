@@ -1,5 +1,9 @@
-# Firemitt
-Fireguards are hot, but not enough to burn. As long as you got your mitts on.
+<p align="center">
+  <img width="100" src="https://raw.githubusercontent.com/EOussama/firemitt/main/assets/firemitt.svg">
+</p>
+
+<h1 align="center">Firemitt</h1>
+<p align="center">Fireguards are hot, but not enough to burn. As long as you got your mitts on.</p>
 
 ## Description
 Firemitt is an intermediate package designed to simplify and streamline the integration process with [Fireguard](https://github.com/EOussama/fireguard) (A firebase middleman app). It offers a suite of helper methods and classes to manage configurations, events, and authentication in a more efficient and less error-prone way. This package is particularly useful for developers working with [Fireguard](https://github.com/EOussama/fireguard) authentication processes and event handling in web applications. Specifially ones under the manifest v3 restrictions.
