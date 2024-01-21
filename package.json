@@ -1,7 +1,29 @@
 {
+  "type": "module",
   "name": "firemitt",
   "version": "0.1.0",
-  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@8.13.1",
+  "homepage": "https://ouss.es/firemitt",
+  "description": "Yes, fireguards are hot, but not enough to burn. Intermediate package that facilitates working with Fireguard.",
+  "author": {
+    "name": "eoussama",
+    "url": "https://ouss.es",
+    "email": "oussama.essamadi@gmail.com"
+  },
+  "keywords": [
+    "auth",
+    "firebase",
+    "fireguard",
+    "firebase-auth"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOussama/firemitt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EOussama/firemitt/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,7 +31,6 @@
     "test": "pnpm exec jest",
     "doc": "pnpm exec typedoc && cp assets/favicon.ico docs/"
   },
-  "packageManager": "pnpm@8.13.1",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "jest": "^29.7.0",
