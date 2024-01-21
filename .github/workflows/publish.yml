@@ -34,10 +34,10 @@ jobs:
 
     - name: Packaging
       run: |
-        cp LICENSE build/
-        cp README.md build/
-        cp package.json build/
-        cp -r assets build/assets
+        cp LICENSE dist/
+        cp README.md dist/
+        cp package.json dist/
+        cp -r assets dist/assets
 
     - name: Publish to npm
       run: npm publish ./build --access public
