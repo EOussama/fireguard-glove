@@ -1,1 +1,0 @@
-import { EventHelper } from '../dist/firemitt.es.js';
