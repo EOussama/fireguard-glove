@@ -40,12 +40,12 @@ jobs:
         cp -r assets dist/assets
 
     - name: Publish to npm
-      run: npm publish ./build --access public
+      run: npm publish ./dist --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Publish to GitHub Registry
-      run: npm publish ./build --registry https://npm.pkg.github.com
+      run: npm publish ./dist --registry https://npm.pkg.github.com
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -57,6 +57,6 @@ jobs:
     - name: Commit and Push to Build Branch
       run: |
         git checkout -b build
-        git add build/
+        git add dist/
         git commit -m "Publish build"
         git push origin build
