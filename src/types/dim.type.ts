@@ -6,11 +6,18 @@
  * This type is used to define the size of elements in terms of their width and height, measured in pixels.
  * 
  * @type {TDim}
- * 
- * @property {number} width - The width dimension in pixels.
- * @property {number} height - The height dimension in pixels.
  */
 export type TDim = {
+
+  /**
+   * @description
+   * The width dimension in pixels.
+   */
   width: number
+
+  /**
+   * @description
+   * The height dimension in pixels.
+   */
   height: number
 }

@@ -10,13 +10,24 @@ import type { TFireguardConfig } from './fireguard-config.type';
  * This type specifies the options that can be provided to customize the Fireguard. It extends the TFireguardConfig with optional properties.
  * 
  * @type {TFireguardOptions}
- * 
- * @property {string} name - The name of the Fireguard.
- * @property {TFirebaseConfig} firebase - The Firebase configuration.
- * @property {Partial<TTheme>} [theme] - Optional theme settings, partially applied.
  */
 export type TFireguardOptions = {
+  
+  /**
+   * @description
+   * The name of the Fireguard.
+   */
   name: string,
+  
+  /**
+   * @description
+   * The Firebase configuration.
+   */
   firebase: TFirebaseConfig
+  
+  /**
+   * @description
+   * Optional theme settings, partially applied.
+   */
   theme?: Partial<TTheme>
 } & Partial<TFireguardConfig>

@@ -6,13 +6,24 @@
  * This type specifies the color scheme for theming purposes, including text, primary, and secondary colors.
  * 
  * @type {TTheme}
- * 
- * @property {string} text - The color used for text elements.
- * @property {string} primary - The primary color of the theme.
- * @property {string} secondary - The secondary color of the theme.
  */
 export type TTheme = {
+  
+  /**
+   * @description
+   * The color used for text elements.
+   */
   text: string
+  
+  /**
+   * @description
+   * The primary color of the theme.
+   */
   primary: string
+  
+  /**
+   * @description
+   * The secondary color of the theme.
+   */
   secondary: string
 }
