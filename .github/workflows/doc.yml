@@ -17,10 +17,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16.14'
-      run: corepack enable
 
     - name: Install Dependencies
-      run: pnpm install
+      run: |
+        corepack enable
+        pnpm install
       env:
         CI: true
 
