@@ -30,6 +30,7 @@ const options = {
   url: 'https://eoussama.github.io/fireguard',
   config: {
     name: 'My App Name',
+    // Your web app's Firebase configuration
     firebase: {
       appId: '',
       apiKey: '',
@@ -61,7 +62,7 @@ Firemitt allows you to pass configurations that allows you to customize Fireguar
 #### `TFiremittOptions`
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `url` | `string` | The URL associated with the Firemitt. |
+| `url` | `string` | The URL of the Fireguard instance. |
 | `pos` | `Partial<TPos>` | Optional, partial position configuration. |
 | `dim` | `Partial<TDim>` | Optional, partial dimension configuration. |
 | `config` | `Partial<TFireguardOptions>` | Optional, partial Fireguard configuration. |
@@ -69,21 +70,21 @@ Firemitt allows you to pass configurations that allows you to customize Fireguar
 #### `TDim`
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `width` | `number` | The width dimension in pixels. |
-| `height` | `number` | The height dimension in pixels. |
+| `width` | `number` | The width dimension of the popup window in pixels. |
+| `height` | `number` | The height dimension of the popup window in pixels. |
 
 #### `TPos`
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `x` | `number` | The x-coordinate of the position. |
-| `y` | `number` | The y-coordinate of the position. |
+| `x` | `number` | The x-coordinate of the popup window. |
+| `y` | `number` | The y-coordinate of the popup window. |
 
 #### `TFireguardOptions`
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| `name` | `string` | The name of the Fireguard. |
-| `firebase` | `TFirebaseConfig` | The Firebase configuration. |
-| `theme` | `Partial<TTheme>` | Optional theme settings, partially applied. |
+| `name` | `string` | The name of your application. |
+| `firebase` | `TFirebaseConfig` | Your Firebase configuration. |
+| `theme` | `Partial<TTheme>` | Optional theme settings. |
 
 #### `TTheme`
 | Property | Type | Description |
@@ -91,14 +92,6 @@ Firemitt allows you to pass configurations that allows you to customize Fireguar
 | `text` | `string` | The color used for text elements. |
 | `primary` | `string` | The primary color of the theme. |
 | `secondary` | `string` | The secondary color of the theme. |
-
-#### `TFireguardConfig`
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| `name` | `string` | The name of the Fireguard. |
-| `logo` | `string` | The URL or path to the Fireguard's logo. |
-| `theme` | `TTheme` | The theme settings for the Fireguard. |
-| `firebase` | `TFirebaseConfig` | The Firebase configuration settings for the Fireguard. |
 
 #### `TFirebaseConfig`
 | Property | Type | Description |
