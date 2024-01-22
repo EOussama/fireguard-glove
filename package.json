@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "firemitt",
+  "name": "@eoussama/firemitt",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "packageManager": "pnpm@8.13.1",
