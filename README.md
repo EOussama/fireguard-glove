@@ -8,7 +8,7 @@
 <p align="center">
   <img src="https://github.com/EOussama/firemitt/actions/workflows/doc.yml/badge.svg" />
   <img src="https://github.com/EOussama/firemitt/actions/workflows/test.yml/badge.svg" />
-  <img src="https://github.com/EOussama/firemitt/actions/workflows/publish.yml/badge.svg" />
+  <img src="https://github.com/EOussama/firemitt/actions/workflows/build.yml/badge.svg" />
 </p>
 
 ## Description
