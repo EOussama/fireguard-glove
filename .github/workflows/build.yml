@@ -38,6 +38,13 @@ jobs:
         rm .gitignore
         rm -rf .github
         mv pkg/* .
+    
+    - name: Deleting old build branch
+      run: |
+        BRANCH_EXISTS=$(git ls-remote --heads origin build | wc -l)
+        if [[ BRANCH_EXISTS != '0' ]]; then
+          git push origin -d build
+        fi
 
     - name: Checkout and update build branch
       uses: EndBug/add-and-commit@v9
