@@ -42,7 +42,7 @@ jobs:
     - name: Deleting old build branch
       run: |
         BRANCH_EXISTS=$(git ls-remote --heads origin build | wc -l)
-        if [[ BRANCH_EXISTS != '0' ]]; then
+        if [[ BRANCH_EXISTS != 0 ]]; then
           git push origin -d build
         fi
 
