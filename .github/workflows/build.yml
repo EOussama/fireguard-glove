@@ -41,8 +41,8 @@ jobs:
     
     - name: Deleting old build branch
       run: |
-        BRANCH_EXISTS=$(git ls-remote --heads origin build | wc -l)
-        if [[ BRANCH_EXISTS != 0 ]]; then
+        BUILD_EXISTS=$(git ls-remote --heads origin build | wc -l)
+        if [ $BUILD_EXISTS -ne 0 ]; then
           git push origin -d build
         fi
 
@@ -51,3 +51,10 @@ jobs:
       with:
         new_branch: build
         pathspec_error_handling: exitImmediately
+
+
+if [[ $(git ls-remote --heads origin build | wc -l) != 0 ]]; then
+  echo "exists"
+else
+  echo "doesn't exist"
+fi
