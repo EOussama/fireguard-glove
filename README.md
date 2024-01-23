@@ -36,10 +36,35 @@ Here's a basic example of how to use it:
 import { FiremittHelper } from 'firemitt';
 
 const options = {
+
   // You can use either this or replace the URL with a self-hosted Fireguard instance.
-  url: 'https://eoussama.github.io/fireguard',
-  config: {
+  url: 'https://ouss.es/fireguard',
+  
+  // Optional
+  pos: {
+    y: 50,
+    x: (window.screen.width / 2) - 500
+  },
+  
+  // Optional
+  dim: {
+    width: 450,
+    height: 260
+  },
+
+  fireguard: {
     name: 'My App Name',
+
+    // Optional
+    logo: 'https://url/to/your/logo/image',
+
+    // Optional
+    theme: {
+      text: 'grey',
+      primary: '#ee16cc',
+      secondary: '#ff12ee'
+    }
+    
     // Your web app's Firebase configuration
     firebase: {
       appId: '',
@@ -51,7 +76,7 @@ const options = {
       messagingSenderId: ''
     }
   }
-};
+}
 
 FiremittHelper.auth(options)
   .then(token => {
