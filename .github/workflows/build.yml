@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '16.14'
-        registry-url: 'https://registry.npmjs.org/'
 
     - name: Install Dependencies
       run: |
@@ -38,35 +37,12 @@ jobs:
         cp LICENSE dist/
         cp README.md dist/
         cp package.json dist/
-        cp assets/firemitt.svg dist/assets/
-
-    - name: Setup Git Config
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-    
-    - name: Check if build branch exists
-      id: check_branch
-      run: |
-        if git ls-remote --heads origin build; then
-          echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
-        else
-          echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
-        fi
-
-    - name: Create orphan build branch
-      if: env.BRANCH_EXISTS == 'false'
-      run: |
-        git checkout --orphan build
-        git reset --hard
-        git commit --allow-empty -m "Initial commit on build branch"
-        git push origin build
+        mkdir -p dist/assets/ && cp assets/firemitt.svg dist/assets/
+        rm -rf $(ls | grep -v dist)
+        rm -rf .github
+        mv dist/* .
 
     - name: Checkout and update build branch
-      if: env.BRANCH_EXISTS == 'true'
-      run: |
-        git checkout build
-        git rm -rf .
-        git add dist/
-        git commit -m "Publish build"
-        git push origin build
+      uses: EndBug/add-and-commit@v9
+      with:
+        new_branch: build
