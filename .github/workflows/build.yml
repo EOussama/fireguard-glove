@@ -38,7 +38,7 @@ jobs:
         cp LICENSE dist/
         cp README.md dist/
         cp package.json dist/
-        cp assets/firemitt.svg dist/assets/
+        mkdir -p dist/assets/ && cp assets/firemitt.svg dist/assets/
 
     - name: Setup Git Config
       run: |
