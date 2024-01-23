@@ -3,6 +3,7 @@
   "name": "@eoussama/firemitt",
   "version": "0.1.1",
   "license": "Apache-2.0",
+  "main": "firemitt.es.js",
   "packageManager": "pnpm@8.13.1",
   "homepage": "https://ouss.es/firemitt",
   "description": "Yes, fireguards are hot, but not enough to burn. Intermediate package that facilitates working with Fireguard.",
