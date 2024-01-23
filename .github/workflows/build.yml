@@ -61,5 +61,8 @@ jobs:
         mv dist/* .
         git add .
         git commit -m "Publish build"
-        git pull origin build
+        BUILD_EXISTS=$(git ls-remote --heads origin build | wc -l)
+        if BUILD_EXISTS != '0'; then
+          git pull origin build
+        fi 
         git push origin build
