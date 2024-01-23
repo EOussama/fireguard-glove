@@ -34,10 +34,10 @@ jobs:
     - name: Packaging
       run: |
         pnpm package
-        rm -rf $(ls | grep -v package)
+        rm -rf $(ls | grep -v pkg)
         rm .gitignore
         rm -rf .github
-        mv package/* .
+        mv pkg/* .
 
     - name: Checkout and update build branch
       uses: EndBug/add-and-commit@v9
