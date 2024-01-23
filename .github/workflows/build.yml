@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     tags:
-      - '*'
+      - '*' 
 
 jobs:
   build:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '16.14'
+        node-version: '20.x'
 
     - name: Install Dependencies
       run: |
@@ -33,16 +33,21 @@ jobs:
 
     - name: Packaging
       run: |
+        pnpm package
+        rm -rf $(ls | grep -v pkg)
         rm .gitignore
-        cp LICENSE dist/
-        cp README.md dist/
-        cp package.json dist/
-        mkdir -p dist/assets/ && cp assets/firemitt.svg dist/assets/
-        rm -rf $(ls | grep -v dist)
         rm -rf .github
-        mv dist/* .
+        mv pkg/* .
+    
+    - name: Deleting old build branch
+      run: |
+        BUILD_EXISTS=$(git ls-remote --heads origin build | wc -l)
+        if [ $BUILD_EXISTS -ne 0 ]; then
+          git push origin -d build
+        fi
 
     - name: Checkout and update build branch
       uses: EndBug/add-and-commit@v9
       with:
         new_branch: build
+        pathspec_error_handling: exitImmediately
