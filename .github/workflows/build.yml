@@ -44,28 +44,11 @@ jobs:
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-    
-    - name: Check if build branch exists
-      id: check_branch
-      run: |
-        if git ls-remote --heads origin build; then
-          echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
-        else
-          echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
-        fi
-
-    - name: Create orphan build branch
-      if: env.BRANCH_EXISTS == 'false'
-      run: |
-        git checkout --orphan build
-        git reset --hard
-        git commit --allow-empty -m "Initial commit on build branch"
-        git push origin build
 
     - name: Checkout and update build branch
       if: env.BRANCH_EXISTS == 'true'
       run: |
-        git checkout build
+        git checkout -B build
         git rm -rf .
         git add dist/
         git commit -m "Publish build"
