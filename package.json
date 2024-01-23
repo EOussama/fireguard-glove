@@ -27,14 +27,14 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
     "test": "pnpm exec jest",
+    "preview": "vite preview",
+    "clean": "rm -rf dist pkg",
+    "build": "tsc && vite build",
     "package": "./scripts/package.sh",
-    "doc": "pnpm exec typedoc && cp assets/favicon.ico docs/"
+    "doc": "pnpm exec typedoc && cp assets/favicon.ico doc/"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "jest": "^29.7.0",
     "typedoc": "^0.25.7",
     "typedoc-material-theme": "^1.0.2",

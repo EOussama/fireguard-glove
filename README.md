@@ -6,10 +6,15 @@
 <p align="center">Fireguards are hot, but not enough to burn. As long as you got your mitts on.</p>
 
 <p align="center">
-  <img src="https://github.com/EOussama/firemitt/actions/workflows/doc.yml/badge.svg" />
-  <img src="https://github.com/EOussama/firemitt/actions/workflows/test.yml/badge.svg" />
-  <img src="https://github.com/EOussama/firemitt/actions/workflows/build.yml/badge.svg" />
-  <img src="https://github.com/EOussama/firemitt/actions/workflows/publish.yml/badge.svg" />
+    <img src="https://github.com/EOussama/firemitt/actions/workflows/doc.yml/badge.svg" />
+    <img src="https://github.com/EOussama/firemitt/actions/workflows/test.yml/badge.svg" />
+    <img src="https://github.com/EOussama/firemitt/actions/workflows/build.yml/badge.svg" />
+    <img src="https://github.com/EOussama/firemitt/actions/workflows/publish.yml/badge.svg" />
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/github/license/eoussama/firemitt" />
+    <img src="https://img.shields.io/github/languages/code-size/eoussama/firemitt" />
 </p>
 
 ## Description
