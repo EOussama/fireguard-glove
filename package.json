@@ -19,10 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EOussama/firemitt.git"
+    "url": "git+https://github.com/eoussama/firemitt.git"
   },
   "bugs": {
-    "url": "https://github.com/EOussama/firemitt/issues"
+    "url": "https://github.com/eoussama/firemitt/issues"
   },
   "scripts": {
     "dev": "vite",
