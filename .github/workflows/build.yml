@@ -51,10 +51,3 @@ jobs:
       with:
         new_branch: build
         pathspec_error_handling: exitImmediately
-
-
-if [[ $(git ls-remote --heads origin build | wc -l) != 0 ]]; then
-  echo "exists"
-else
-  echo "doesn't exist"
-fi
