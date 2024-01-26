@@ -1,3 +1,4 @@
+import { ErrorType } from '..';
 import { BaseError } from './base.error';
 
 /**
@@ -16,6 +17,6 @@ export class InvalidProviderError extends BaseError {
    * @param providerName The invalid provider name that caused the error.
    */
   constructor(providerName: string) {
-    super(`Invalid provider, "${providerName}" is not a valid provider name`);
+    super(ErrorType.InvalidProvider, `Invalid provider, "${providerName}" is not a valid provider name`);
   }
 }

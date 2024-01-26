@@ -1,3 +1,4 @@
+import { ErrorType } from '..';
 import { BaseError } from './base.error';
 
 /**
@@ -15,6 +16,6 @@ export class InvalidAppNameError extends BaseError {
    * The default error message indicates that an invalid app name was provided.
    */
   constructor() {
-    super('Invalid app name, please specify a name for your app');
+    super(ErrorType.InvalidAppName, 'Invalid app name, please specify a name for your app');
   }
 }
