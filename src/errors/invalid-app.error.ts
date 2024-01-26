@@ -1,3 +1,4 @@
+import { ErrorType } from '..';
 import { BaseError } from './base.error';
 
 /**
@@ -16,6 +17,6 @@ export class InvalidAppError extends BaseError {
    * The default error message indicates that Firebase initialization failed due to an invalid configuration.
    */
   constructor() {
-    super('Invalid Firebase app, failed initializing fire base with the given configuration');
+    super(ErrorType.InvalidApp, 'Invalid Firebase app, failed initializing fire base with the given configuration');
   }
 }
