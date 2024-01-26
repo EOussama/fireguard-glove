@@ -1,3 +1,4 @@
+import { ErrorType } from '..';
 import { BaseError } from './base.error';
 
 /**
@@ -15,6 +16,6 @@ export class InvalidURLError extends BaseError {
    * The default error message indicates that an invalid URL was provided for a Fireguard instance.
    */
   constructor() {
-    super('Invalid URL name, please specify a valid URL for a Fireguard instance');
+    super(ErrorType.InvalidURL, 'Invalid URL name, please specify a valid URL for a Fireguard instance');
   }
 }
